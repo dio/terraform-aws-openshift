@@ -18,7 +18,7 @@
         name: "{{ item }}"
         state: enabled
       register: rhsm_repository
-      with_items: 
+      with_items:
       - rhel-7-server-rpms
       - rhel-7-server-extras-rpms
       - rhel-7-server-ansible-2.6-rpms
@@ -51,4 +51,3 @@
         state: started
         enabled: yes
       when: ansible_distribution in ['CentOS']
-
